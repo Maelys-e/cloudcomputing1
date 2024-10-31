@@ -20,10 +20,5 @@ describe('typeScript test suite', () => {
     const total_memory = getSystemInformation().freeMemory + getSystemInformation().usedMemory;
     expect(total_memory).toBe(getSystemInformation().totalMemory);
   });
-  it('should be a desktop', () => {
-    expect.assertions(1);
-    const host_name = getSystemInformation().hostname;
-    expect(host_name.toLowerCase().includes('desktop')).toBe(true);
-  });
 });
 // regroupe des tests unitaires similaires, en l'occurrence les "typeScript test suite"
