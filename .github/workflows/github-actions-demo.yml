@@ -27,8 +27,9 @@ jobs:
       # on construit l'image Docker
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}:${{ github.sha }} .
+          docker build -t sysinfo-api:latest
           docker tag sysinfo-api:0.0.1 ${{ secrets.DOCKER_USERNAME }}/sysinfo-api:0.0.1
       - name: Push Docker image
         run: |
+          docker push docker.io/${{ secrets.DOCKER_USERNAME }}/sysinfo-api:${{ github.sha }}
           docker push docker.io/${{ secrets.DOCKER_USERNAME }}/sysinfo-api:latest
