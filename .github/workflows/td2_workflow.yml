@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          sudo apt update && sudo apt install node
+          sudo apt update && sudo apt install nodejs
       - name: Build
         run: |
           npm build
