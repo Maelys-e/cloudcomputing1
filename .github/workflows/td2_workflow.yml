@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Install dependencies
         run: |
-          apt install node
+          sudo apt install node
           npm build
       - name: Run tests
         run: |
