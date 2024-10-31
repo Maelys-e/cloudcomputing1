@@ -8,6 +8,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt install node
+      - name: Build
+        run: |
           npm build
       - name: Run tests
         run: |
